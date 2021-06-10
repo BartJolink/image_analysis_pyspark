@@ -27,6 +27,8 @@ When using a WSL2 system, make sure that Docker is running on WSL2.
  `python3 pyspark_ml.py main`
 
 # Results
+The top 5 rows of the table of raw predictions
+
 |       rawPrediction|prediction|label|            features|
 ---------------------|----------|-----|--------------------|
 | 2.30111863728145...|       0.0|NO_SP| 1.9,1.8,-1.6,-0....|
@@ -34,3 +36,6 @@ When using a WSL2 system, make sure that Docker is running on WSL2.
 | 2.30111863728145...|       0.0|NO_SP|[1.9,-3.5,-3.5,4....|
 | 2.30111863728145...|       0.0|NO_SP|[1.9,3.8,-0.4,-0....|
 | 2.30111863728145...|       0.0|NO_SP|[1.9,3.8,-0.4,1.8...|
+
+The test accuracy
+*74.55465784094227% *
