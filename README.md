@@ -21,5 +21,5 @@ When using a WSL2 system, make sure that Docker is running on WSL2.
 1. Clone repository
 3. Run the docker containr using the command: `docker run -it --rm --mount type=bind,source=./image_analysis_pyspark,target=/image_analysis bartjj/pyspark_image_analysis:latest /bin/bash`
     * For `source=./image_analysis_pyspark`, use the full path to the directory (the cloned repository).    
-      *e.g. /mnt/d/project/image_analysis_pyspark*
+      *e.g. `source=/mnt/d/project/image_analysis_pyspark`*
 5. Run script: `python3 pyspark_ml.py main`
