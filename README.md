@@ -38,4 +38,4 @@ The top 5 rows of the table of raw predictions
 | 2.30111863728145...|       0.0|NO_SP|[1.9,3.8,-0.4,1.8...|
 
 The test accuracy
-*74.55465784094227% *
+`74.55465784094227%`
