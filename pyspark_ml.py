@@ -6,7 +6,12 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import re
 import sys
 from pyspark.context import SparkContext
+from pyspark.mllib.evaluation import MulticlassMetrics
 from pyspark.sql.session import SparkSession
+import os
+
+os.environ['PYSPARK_PYTHON'] = sys.executable
+os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
 
 amino_hydropathy_index = {
     "A": 1.8, "C": 2.5, "D": -3.5, "E": -3.5, "F": 2.8, "G": -0.4, "H": -3.2, "I": 4.5, "K": -3.9, "L": 3.8,
@@ -66,8 +71,8 @@ def fit_model(df):
     
     # show results
     predictions.select("rawPrediction", "prediction", "label", "features").show(5)
-    print(F"Test Accuracy = {accuracy*100}%")
-    print(f"Test Error = {(1.0 - accuracy)*100}%")
+    print("Test Accuracy = " + str(accuracy*100) + "%")
+    print("Test Error = " + str((1.0-accuracy)*100) + "%")
 
 # call with 'python pyspark_ml.py main'
 if __name__ == '__main__':
