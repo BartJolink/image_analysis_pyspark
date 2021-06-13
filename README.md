@@ -7,6 +7,9 @@
 |   Inge        |  617432           |
 |   Noah        |   626290          |
 
+## Prediction
+This script predict signal peptides with the SignalP sequence dataset. This dataset contains sequences with and withoud signal peptides. 
+
 ## Summary
 The docker container is used to run the script.
 Because the docker contains the modules necessary for the script it is no longer necessary to manually install the required modules for the python script to work.
